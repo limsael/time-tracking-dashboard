@@ -1,0 +1,391 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300..500&display=swap");
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: hsl(226, 43%, 10%);
+  padding: 2.5rem 1.95rem;
+}
+
+.main {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.user {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 16px;
+}
+.user__infos {
+  background-color: hsl(246, 80%, 60%);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 2rem 1.5rem;
+  border-radius: 16px;
+}
+.user__avatar {
+  width: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid hsl(0, 0%, 100%);
+}
+.user__action {
+  color: hsl(236, 100%, 87%);
+  margin-block-end: 0.2rem;
+}
+.user__name {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.user__data {
+  padding: 1.5rem 0.95rem;
+  margin-inline-start: 0.95rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.user__daily, .user__weekly, .user__monthly {
+  text-decoration: none;
+  color: hsl(236, 100%, 87%);
+  transition: color 0.4s ease-in-out;
+}
+.user__daily:hover, .user__weekly:hover, .user__monthly:hover {
+  color: white;
+}
+.user__daily.active, .user__weekly.active, .user__monthly.active {
+  color: hsl(0, 0%, 100%);
+}
+
+.daily {
+  display: none;
+  gap: 20px;
+}
+.daily__work, .daily__play, .daily__study, .daily__exercise, .daily__social, .daily__care {
+  background: url(../images/icon-work.svg), hsl(15, 100%, 70%);
+  background-repeat: no-repeat;
+  background-position: 90% -10px;
+  border-radius: 16px;
+}
+.daily__work-details, .daily__play-details, .daily__study-details, .daily__exercise-details, .daily__social-details, .daily__care-details {
+  background-color: hsl(235, 46%, 20%);
+  margin-block-start: 2.25rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  padding: 1.5rem 1rem;
+  transition: background-color 0.4s ease-in-out;
+}
+.daily__work-details:hover, .daily__play-details:hover, .daily__study-details:hover, .daily__exercise-details:hover, .daily__social-details:hover, .daily__care-details:hover {
+  background-color: hsl(235, 45%, 61%);
+}
+.daily__work-data, .daily__play-data, .daily__study-data, .daily__exercise-data, .daily__social-data, .daily__care-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block-end: 0.3rem;
+}
+.daily__work-title, .daily__play-title, .daily__study-title, .daily__exercise-title, .daily__social-title, .daily__care-title {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.125rem;
+}
+.daily__work-img, .daily__play-img, .daily__study-img, .daily__exercise-img, .daily__social-img, .daily__care-img {
+  cursor: pointer;
+}
+.daily__work-infos, .daily__play-infos, .daily__study-infos, .daily__exercise-infos, .daily__social-infos, .daily__care-infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.daily__work-hours, .daily__play-hours, .daily__study-hours, .daily__exercise-hours, .daily__social-hours, .daily__care-hours {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.95rem;
+  font-weight: 300;
+}
+.daily__work-previous, .daily__play-previous, .daily__study-previous, .daily__exercise-previous, .daily__social-previous, .daily__care-previous {
+  color: hsl(236, 100%, 87%);
+}
+.daily__play {
+  background: url(../images/icon-play.svg), hsl(195, 74%, 62%);
+  background-repeat: no-repeat;
+  background-position: 90% -10px;
+}
+.daily__study {
+  background: url(../images/icon-study.svg), hsl(348, 100%, 68%);
+  background-repeat: no-repeat;
+  background-position: 90% -10px;
+}
+.daily__exercise {
+  background: url(../images/icon-exercise.svg), hsl(145, 58%, 55%);
+  background-repeat: no-repeat;
+  background-position: 90% -5px;
+}
+.daily__social {
+  background: url(../images/icon-social.svg), hsl(264, 64%, 52%);
+  background-repeat: no-repeat;
+  background-position: 90% -15px;
+}
+.daily__care {
+  background: url(../images/icon-self-care.svg), hsl(43, 84%, 65%);
+  background-repeat: no-repeat;
+  background-position: 90% -10px;
+}
+
+.weekly {
+  display: grid;
+  gap: 20px;
+}
+.weekly__work, .weekly__play, .weekly__study, .weekly__exercise, .weekly__social, .weekly__care {
+  background: url(../images/icon-work.svg), hsl(15, 100%, 70%);
+  background-repeat: no-repeat;
+  background-position: 90% -10px;
+  border-radius: 16px;
+}
+.weekly__work-details, .weekly__play-details, .weekly__study-details, .weekly__exercise-details, .weekly__social-details, .weekly__care-details {
+  background-color: hsl(235, 46%, 20%);
+  margin-block-start: 2.25rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  padding: 1.5rem 1rem;
+  transition: background-color 0.4s ease-in-out;
+}
+.weekly__work-details:hover, .weekly__play-details:hover, .weekly__study-details:hover, .weekly__exercise-details:hover, .weekly__social-details:hover, .weekly__care-details:hover {
+  background-color: hsl(235, 45%, 61%);
+}
+.weekly__work-data, .weekly__play-data, .weekly__study-data, .weekly__exercise-data, .weekly__social-data, .weekly__care-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block-end: 0.3rem;
+}
+.weekly__work-title, .weekly__play-title, .weekly__study-title, .weekly__exercise-title, .weekly__social-title, .weekly__care-title {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.125rem;
+}
+.weekly__work-img, .weekly__play-img, .weekly__study-img, .weekly__exercise-img, .weekly__social-img, .weekly__care-img {
+  cursor: pointer;
+}
+.weekly__work-infos, .weekly__play-infos, .weekly__study-infos, .weekly__exercise-infos, .weekly__social-infos, .weekly__care-infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.weekly__work-hours, .weekly__play-hours, .weekly__study-hours, .weekly__exercise-hours, .weekly__social-hours, .weekly__care-hours {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.95rem;
+  font-weight: 300;
+}
+.weekly__work-previous, .weekly__play-previous, .weekly__study-previous, .weekly__exercise-previous, .weekly__social-previous, .weekly__care-previous {
+  color: hsl(236, 100%, 87%);
+}
+.weekly__play {
+  background: url(../images/icon-play.svg), hsl(195, 74%, 62%);
+  background-repeat: no-repeat;
+  background-position: 90% -10px;
+}
+.weekly__study {
+  background: url(../images/icon-study.svg), hsl(348, 100%, 68%);
+  background-repeat: no-repeat;
+  background-position: 90% -10px;
+}
+.weekly__exercise {
+  background: url(../images/icon-exercise.svg), hsl(145, 58%, 55%);
+  background-repeat: no-repeat;
+  background-position: 90% -5px;
+}
+.weekly__social {
+  background: url(../images/icon-social.svg), hsl(264, 64%, 52%);
+  background-repeat: no-repeat;
+  background-position: 90% -15px;
+}
+.weekly__care {
+  background: url(../images/icon-self-care.svg), hsl(43, 84%, 65%);
+  background-repeat: no-repeat;
+  background-position: 90% -10px;
+}
+
+.monthly {
+  display: none;
+  gap: 20px;
+}
+.monthly__work, .monthly__play, .monthly__study, .monthly__exercise, .monthly__social, .monthly__care {
+  background: url(../images/icon-work.svg), hsl(15, 100%, 70%);
+  background-repeat: no-repeat;
+  background-position: 90% -10px;
+  border-radius: 16px;
+}
+.monthly__work-details, .monthly__play-details, .monthly__study-details, .monthly__exercise-details, .monthly__social-details, .monthly__care-details {
+  background-color: hsl(235, 46%, 20%);
+  margin-block-start: 2.25rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  padding: 1.5rem 1rem;
+  transition: background-color 0.4s ease-in-out;
+}
+.monthly__work-details:hover, .monthly__play-details:hover, .monthly__study-details:hover, .monthly__exercise-details:hover, .monthly__social-details:hover, .monthly__care-details:hover {
+  background-color: hsl(235, 45%, 61%);
+}
+.monthly__work-data, .monthly__play-data, .monthly__study-data, .monthly__exercise-data, .monthly__social-data, .monthly__care-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block-end: 0.3rem;
+}
+.monthly__work-title, .monthly__play-title, .monthly__study-title, .monthly__exercise-title, .monthly__social-title, .monthly__care-title {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.125rem;
+}
+.monthly__work-img, .monthly__play-img, .monthly__study-img, .monthly__exercise-img, .monthly__social-img, .monthly__care-img {
+  cursor: pointer;
+}
+.monthly__work-infos, .monthly__play-infos, .monthly__study-infos, .monthly__exercise-infos, .monthly__social-infos, .monthly__care-infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.monthly__work-hours, .monthly__play-hours, .monthly__study-hours, .monthly__exercise-hours, .monthly__social-hours, .monthly__care-hours {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.95rem;
+  font-weight: 300;
+}
+.monthly__work-previous, .monthly__play-previous, .monthly__study-previous, .monthly__exercise-previous, .monthly__social-previous, .monthly__care-previous {
+  color: hsl(236, 100%, 87%);
+}
+.monthly__play {
+  background: url(../images/icon-play.svg), hsl(195, 74%, 62%);
+  background-repeat: no-repeat;
+  background-position: 90% -10px;
+}
+.monthly__study {
+  background: url(../images/icon-study.svg), hsl(348, 100%, 68%);
+  background-repeat: no-repeat;
+  background-position: 90% -10px;
+}
+.monthly__exercise {
+  background: url(../images/icon-exercise.svg), hsl(145, 58%, 55%);
+  background-repeat: no-repeat;
+  background-position: 90% -5px;
+}
+.monthly__social {
+  background: url(../images/icon-social.svg), hsl(264, 64%, 52%);
+  background-repeat: no-repeat;
+  background-position: 90% -15px;
+}
+.monthly__care {
+  background: url(../images/icon-self-care.svg), hsl(43, 84%, 65%);
+  background-repeat: no-repeat;
+  background-position: 90% -10px;
+}
+
+@media screen and (min-width: 900px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100svh;
+  }
+  .main {
+    grid-template-columns: 195px 1fr;
+    gap: 0.95rem;
+  }
+  .user__infos {
+    flex-direction: column;
+    align-items: start;
+    padding-top: 1.75rem;
+    padding-bottom: 1.95rem;
+  }
+  .user__avatar {
+    margin-block-end: 1.25rem;
+  }
+  .user__actions {
+    margin-block-end: 1.35rem;
+  }
+  .user__name {
+    font-size: 1.95rem;
+  }
+  .user__data {
+    flex-direction: column;
+    align-items: start;
+    gap: 0.95rem;
+  }
+  .daily,
+  .weekly,
+  .monthly {
+    grid-template-columns: repeat(3, 200px);
+    gap: 15px;
+  }
+  .daily__work-data, .daily__play-data, .daily__study-data, .daily__exercise-data, .daily__social-data, .daily__care-data,
+  .weekly__work-data,
+  .weekly__play-data,
+  .weekly__study-data,
+  .weekly__exercise-data,
+  .weekly__social-data,
+  .weekly__care-data,
+  .monthly__work-data,
+  .monthly__play-data,
+  .monthly__study-data,
+  .monthly__exercise-data,
+  .monthly__social-data,
+  .monthly__care-data {
+    margin-block-end: 1.125rem;
+  }
+  .daily__work-infos, .daily__play-infos, .daily__study-infos, .daily__exercise-infos, .daily__social-infos, .daily__care-infos,
+  .weekly__work-infos,
+  .weekly__play-infos,
+  .weekly__study-infos,
+  .weekly__exercise-infos,
+  .weekly__social-infos,
+  .weekly__care-infos,
+  .monthly__work-infos,
+  .monthly__play-infos,
+  .monthly__study-infos,
+  .monthly__exercise-infos,
+  .monthly__social-infos,
+  .monthly__care-infos {
+    flex-direction: column;
+    align-items: start;
+  }
+  .daily__work-hours, .daily__play-hours, .daily__study-hours, .daily__exercise-hours, .daily__social-hours, .daily__care-hours,
+  .weekly__work-hours,
+  .weekly__play-hours,
+  .weekly__study-hours,
+  .weekly__exercise-hours,
+  .weekly__social-hours,
+  .weekly__care-hours,
+  .monthly__work-hours,
+  .monthly__play-hours,
+  .monthly__study-hours,
+  .monthly__exercise-hours,
+  .monthly__social-hours,
+  .monthly__care-hours {
+    font-size: 2.75rem;
+    margin-block-end: 0.75rem;
+  }
+  .daily__work-previous, .daily__play-previous, .daily__study-previous, .daily__exercise-previous, .daily__social-previous, .daily__care-previous,
+  .weekly__work-previous,
+  .weekly__play-previous,
+  .weekly__study-previous,
+  .weekly__exercise-previous,
+  .weekly__social-previous,
+  .weekly__care-previous,
+  .monthly__work-previous,
+  .monthly__play-previous,
+  .monthly__study-previous,
+  .monthly__exercise-previous,
+  .monthly__social-previous,
+  .monthly__care-previous {
+    font-size: 0.75rem;
+  }
+}

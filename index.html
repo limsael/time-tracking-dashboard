@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="main">
+      <div class="user">
+        <div class="user__infos">
+          <img
+            class="user__avatar"
+            src="./images/image-jeremy.png"
+            alt="User Avatar"
+          />
+
+          <div class="user__actions">
+            <div class="user__action">Report for</div>
+            <h1 class="user__name">Jeremy Robson</h1>
+          </div>
+        </div>
+
+        <div class="user__data">
+          <p>
+            <a href="#" class="user__daily" id="daily-link">Daily</a>
+          </p>
+
+          <p>
+            <a href="#" class="user__weekly active" id="weekly-link">Weekly</a>
+          </p>
+
+          <p>
+            <a href="#" class="user__monthly" id="monthly-link">Monthly</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="activities">
+        <div class="daily">
+          <div class="daily__work">
+            <div class="daily__work-details">
+              <div class="daily__work-data">
+                <h2 class="daily__work-title">Work</h2>
+                <img
+                  src="./images/icon-ellipsis.svg"
+                  alt="Icon Ellipsis"
+                  class="daily__work-img"
+                />
+              </div>
+
+              <div class="daily__work-infos">
+                <p class="daily__work-hours">5hrs</p>
+                <p class="daily__work-previous">Last day-7hrs</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="daily__play">
+            <div class="daily__play-details">
+              <div class="daily__play-data">
+                <h2 class="daily__play-title">Play</h2>
+                <img
+                  src="./images/icon-ellipsis.svg"
+                  alt="Icon Ellipsis"
+                  class="daily__play-img"
+                />
+              </div>
+
+              <div class="daily__play-infos">
+                <p class="daily__play-hours">1hr</p>
+                <p class="daily__play-previous">Last day-2hrs</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="daily__study">
+            <div class="daily__study-details">
+              <div class="daily__study-data">
+                <h2 class="daily__study-title">Study</h2>
+                <img
+                  src="./images/icon-ellipsis.svg"
+                  alt="Icon Ellipsis"
+                  class="daily__study-img"
+                />
+              </div>
+
+              <div class="daily__study-infos">
+                <p class="daily__study-hours">0hrs</p>
+                <p class="daily__study-previous">Last day-1hr</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="daily__exercise">
+            <div class="daily__exercise-details">
+              <div class="daily__exercise-data">
+                <h2 class="daily__exercise-title">Exercise</h2>
+                <img
+                  src="./images/icon-ellipsis.svg"
+                  alt="Icon Ellipsis"
+                  class="daily__exercise-img"
+                />
+              </div>
+
+              <div class="daily__exercise-infos">
+                <p class="daily__exercise-hours">1hr</p>
+                <p class="daily__exercise-previous">Last day-1hr</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="daily__social">
+            <div class="daily__social-details">
+              <div class="daily__social-data">
+                <h2 class="daily__social-title">Social</h2>
+                <img
+                  src="./images/icon-ellipsis.svg"
+                  alt="Icon Ellipsis"
+                  class="daily__social-img"
+                />
+              </div>
+
+              <div class="daily__social-infos">
+                <p class="daily__social-hours">1hr</p>
+                <p class="daily__social-previous">Last day-3hrs</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="daily__care">
+            <div class="daily__care-details">
+              <div class="daily__care-data">
+                <h2 class="daily__care-title">Self Care</h2>
+                <img
+                  src="./images/icon-ellipsis.svg"
+                  alt="Icon Ellipsis"
+                  class="daily__care-img"
+                />
+              </div>
+
+              <div class="daily__care-infos">
+                <p class="daily__care-hours">0hrs</p>
+                <p class="daily__care-previous">Last day-1hr</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="weekly">
+          <div class="weekly__work">
+            <div class="weekly__work-details">
+              <div class="weekly__work-data">
+                <h2 class="weekly__work-title">Work</h2>
+                <img
+                  src="./images/icon-ellipsis.svg"
+                  alt="Icon Ellipsis"
+                  class="weekly__work-img"
+                />
+              </div>
+
+              <div class="weekly__work-infos">
+                <p class="weekly__work-hours">32hrs</p>
+                <p class="weekly__work-previous">Last Week - 36hrs</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="weekly__play">
+            <div class="weekly__play-details">
+              <div class="weekly__play-data">
+                <h2 class="weekly__play-title">Play</h2>
+                <img
+                  src="./images/icon-ellipsis.svg"
+                  alt="Icon Ellipsis"
+                  class="weekly__play-img"
+                />
+              </div>
+
+              <div class="weekly__play-infos">
+                <p class="weekly__play-hours">10hrs</p>
+                <p class="weekly__play-previous">Last Week-8hrs</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="weekly__study">
+            <div class="weekly__study-details">
+              <div class="weekly__study-data">
+                <h2 class="weekly__study-title">Study</h2>
+                <img
+                  src="./images/icon-ellipsis.svg"
+                  alt="Icon Ellipsis"
+                  class="weekly__study-img"
+                />
+              </div>
+
+              <div class="weekly__study-infos">
+                <p class="weekly__study-hours">4hrs</p>
+                <p class="weekly__study-previous">Last Week-7hrs</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="weekly__exercise">
+            <div class="weekly__exercise-details">
+              <div class="weekly__exercise-data">
+                <h2 class="weekly__exercise-title">Exercise</h2>
+                <img
+                  src="./images/icon-ellipsis.svg"
+                  alt="Icon Ellipsis"
+                  class="weekly__exercise-img"
+                />
+              </div>
+
+              <div class="weekly__exercise-infos">
+                <p class="weekly__exercise-hours">4hrs</p>
+                <p class="weekly__exercise-previous">Last Week-5hrs</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="weekly__social">
+            <div class="weekly__social-details">
+              <div class="weekly__social-data">
+                <h2 class="weekly__social-title">Social</h2>
+                <img
+                  src="./images/icon-ellipsis.svg"
+                  alt="Icon Ellipsis"
+                  class="weekly__social-img"
+                />
+              </div>
+
+              <div class="weekly__social-infos">
+                <p class="weekly__social-hours">5hrs</p>
+                <p class="weekly__social-previous">Last Week-10hrs</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="weekly__care">
+            <div class="weekly__care-details">
+              <div class="weekly__care-data">
+                <h2 class="weekly__care-title">Self Care</h2>
+                <img
+                  src="./images/icon-ellipsis.svg"
+                  alt="Icon Ellipsis"
+                  class="weekly__care-img"
+                />
+              </div>
+
+              <div class="weekly__care-infos">
+                <p class="weekly__care-hours">2hrs</p>
+                <p class="weekly__care-previous">Last Week-2hrs</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="monthly">
+          <div class="monthly__work">
+            <div class="monthly__work-details">
+              <div class="monthly__work-data">
+                <h2 class="monthly__work-title">Work</h2>
+                <img
+                  src="./images/icon-ellipsis.svg"
+                  alt="Icon Ellipsis"
+                  class="monthly__work-img"
+                />
+              </div>
+
+              <div class="monthly__work-infos">
+                <p class="monthly__work-hours">103hrs</p>
+                <p class="monthly__work-previous">Last Month-128hrs</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="monthly__play">
+            <div class="monthly__play-details">
+              <div class="monthly__play-data">
+                <h2 class="monthly__play-title">Play</h2>
+                <img
+                  src="./images/icon-ellipsis.svg"
+                  alt="Icon Ellipsis"
+                  class="monthly__play-img"
+                />
+              </div>
+
+              <div class="monthly__play-infos">
+                <p class="monthly__play-hours">23hrs</p>
+                <p class="monthly__play-previous">Last Month-29hrs</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="monthly__study">
+            <div class="monthly__study-details">
+              <div class="monthly__study-data">
+                <h2 class="monthly__study-title">Study</h2>
+                <img
+                  src="./images/icon-ellipsis.svg"
+                  alt="Icon Ellipsis"
+                  class="monthly__study-img"
+                />
+              </div>
+
+              <div class="monthly__study-infos">
+                <p class="monthly__study-hours">13hrs</p>
+                <p class="monthly__study-previous">Last Month-19hrs</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="monthly__exercise">
+            <div class="monthly__exercise-details">
+              <div class="monthly__exercise-data">
+                <h2 class="monthly__exercise-title">Exercise</h2>
+                <img
+                  src="./images/icon-ellipsis.svg"
+                  alt="Icon Ellipsis"
+                  class="monthly__exercise-img"
+                />
+              </div>
+
+              <div class="monthly__exercise-infos">
+                <p class="monthly__exercise-hours">11hrs</p>
+                <p class="monthly__exercise-previous">Last Month-18hrs</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="monthly__social">
+            <div class="monthly__social-details">
+              <div class="monthly__social-data">
+                <h2 class="monthly__social-title">Social</h2>
+                <img
+                  src="./images/icon-ellipsis.svg"
+                  alt="Icon Ellipsis"
+                  class="monthly__social-img"
+                />
+              </div>
+
+              <div class="monthly__social-infos">
+                <p class="monthly__social-hours">21hrs</p>
+                <p class="monthly__social-previous">Last Month-23hrs</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="monthly__care">
+            <div class="monthly__care-details">
+              <div class="monthly__care-data">
+                <h2 class="monthly__care-title">Self Care</h2>
+                <img
+                  src="./images/icon-ellipsis.svg"
+                  alt="Icon Ellipsis"
+                  class="monthly__care-img"
+                />
+              </div>
+
+              <div class="monthly__care-infos">
+                <p class="monthly__care-hours">7hrs</p>
+                <p class="monthly__care-previous">Last Month-11hrs</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

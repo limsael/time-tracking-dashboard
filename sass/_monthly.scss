@@ -1,0 +1,94 @@
+.monthly {
+  display: none;
+  gap: 20px;
+
+  &__work,
+  &__play,
+  &__study,
+  &__exercise,
+  &__social,
+  &__care {
+    background: url(../images/icon-work.svg), $light-red-work;
+    background-repeat: no-repeat;
+    background-position: 90% -10px;
+    border-radius: 16px;
+
+    &-details {
+      background-color: $dark-blue;
+      margin-block-start: 2.25rem;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+      padding: 1.5rem 1rem;
+      transition: background-color 0.4s ease-in-out;
+
+      &:hover {
+        background-color: $desaturated-blue;
+      }
+    }
+
+    &-data {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-block-end: 0.3rem;
+    }
+
+    &-title {
+      color: $white;
+      font-size: 1.125rem;
+    }
+
+    &-img {
+      cursor: pointer;
+    }
+
+    &-infos {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-hours {
+      // font-size: 1.125rem;
+      color: $white;
+      font-size: 1.95rem;
+      font-weight: 300;
+    }
+
+    &-previous {
+      color: $pale-blue;
+    }
+  }
+
+  &__play {
+    background: url(../images/icon-play.svg), $soft-blue-play;
+    background-repeat: no-repeat;
+    background-position: 90% -10px;
+  }
+
+  &__study {
+    background: url(../images/icon-study.svg), $light-red-study;
+    background-repeat: no-repeat;
+    background-position: 90% -10px;
+  }
+
+  &__exercise {
+    background: url(../images/icon-exercise.svg), $lime-green-exercise;
+    background-repeat: no-repeat;
+    background-position: 90% -5px;
+  }
+
+  &__social {
+    background: url(../images/icon-social.svg), $violet-social;
+    background-repeat: no-repeat;
+    background-position: 90% -15px;
+  }
+
+  &__care {
+    background: url(../images/icon-self-care.svg), $soft-orange-self-care;
+    background-repeat: no-repeat;
+    background-position: 90% -10px;
+  }
+}
