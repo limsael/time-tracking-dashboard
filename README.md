@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL here](https://your-solution-url.com)
-- [Live Site URL](https://your-live-site-url.com)
+- [Solution URL here](https://www.frontendmentor.io/solutions/time-tracking-dashboard-html-sass-js-2nBNUcmwto)
+- [Live Site URL](https://limsael.github.io/time-tracking-dashboard/)
 
 ## My process
 
